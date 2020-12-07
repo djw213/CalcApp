@@ -16,3 +16,17 @@ suite("Integration tests for coin flip system", function() {
   });
 
 });
+
+
+suite("Integration tests for add function", function() {
+
+  test("Test GET /add", function() {
+    let app = server.app;
+
+    chai.request(app).get("/flip/5/12").end(function(error, response) {
+      chai.assert.equal(response.status, 200, "Wrong status code");
+      chai.assert.equal("17", response.text, "Wrong response text");
+    });
+  });
+
+});
