@@ -23,3 +23,13 @@ suite("Test coin flip", function() {
   });
 
 });
+
+
+suite("Test addition function", function() {
+
+  test("Test addition works correctly", function() {
+    chai.assert.equal(17, logic.addNumbers(5, 12), "5+12 should = 17");
+    chai.assert.equal(26, logic.addNumbers(17, 9), "17+9 should = 26");
+  });
+
+});
